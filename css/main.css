@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(194, 252, 232);
+}
+
+.watermark {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.middleBand {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    min-height: 150px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.watermark img {
+    mix-blend-mode: multiply;
+    opacity: 33%;
+    width: 33%;
+    min-height: 150px;
+    min-height: 150px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
