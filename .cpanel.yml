@@ -4,7 +4,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/irackcom/public_html/
-    - export REPOPATH=/home/irackcom/repositoires/ira3ckDotCom
+    - export REPOPATH=/home/irackcom/repositories/ira3ckDotCom
     - /bin/rm -Rf ${DEPLOYPATH}_old
     - /bin/cp -R ${DEPLOYPATH} ${DEPLOYPATH}_old
     - /bin/rsync -aP --exclude '.git' --exclude '.well-known' ${REPOPATH}/ ${DEPLOYPATH} --delete-after
