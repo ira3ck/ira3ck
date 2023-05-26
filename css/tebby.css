@@ -1,0 +1,62 @@
+@font-face {
+    font-family: SimplySans;
+    src: url(../font/SimplySans-Bold.ttf);
+}
+
+body {
+    background-color: rgb(225, 255, 255);
+    font-family: SimplySans;
+    color: rgb(16, 64, 119);
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(white 20%, transparent 20%), radial-gradient(white 20%, transparent 20%);
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
+    z-index: -10;
+}
+
+.tapa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(white, black);
+    mix-blend-mode: screen;
+    z-index: -9;
+}
+
+.clockConntainer {
+    width: min-content;
+}
+
+#clock {
+    font-size: calc(63px + 13.3vw);
+    padding-bottom: 0;
+    margin-bottom: -73px;
+    margin-top: 3.3vh;
+}
+
+#ampm {
+    font-size: calc(83px + 3.3vw);
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#date {
+    font-size: calc(33px + 1.3vw);
+    padding-bottom: 0;
+    margin-bottom: 0;
+    text-align: end;
+}
+
+a {
+    display: none;
+}
