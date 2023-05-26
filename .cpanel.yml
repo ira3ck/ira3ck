@@ -5,12 +5,13 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/irackcom/public_html
     - export REPOPATH=/home/irackcom/repositories/ira3ckDotCom
-    - /bin/rm -Rf ${DEPLOYPATH}_old
+    - /bin/cp -R . $DEPLOYPATH
+    #- /bin/rm -Rf ${DEPLOYPATH}_old
     #- /bin/cp -R ${DEPLOYPATH} ${DEPLOYPATH}_old
-    - /bin/rsync -aP --exclude '.git' --exclude '.well-known' ${REPOPATH}/ ${DEPLOYPATH} --delete-after
-    - /bin/chmod 755 ${DEPLOYPATH}
-    - /bin/find ${DEPLOYPATH} -type d -exec /bin/chmod 755 '{}' \;
-    - /bin/find ${DEPLOYPATH} -type f -exec /bin/chmod 644 '{}' \;
+    #- /bin/rsync -aP --exclude '.git' --exclude '.well-known' ${REPOPATH}/ ${DEPLOYPATH} --delete-after
+    #- /bin/chmod 755 ${DEPLOYPATH}
+    #- /bin/find ${DEPLOYPATH} -type d -exec /bin/chmod 755 '{}' \;
+    #- /bin/find ${DEPLOYPATH} -type f -exec /bin/chmod 644 '{}' \;
 	  #- /bin/cp ${REPOPATH}index.html $DEPLOYPATH
     #- /bin/cp -R ${REPOPATH}css $DEPLOYPATH
     #- /bin/cp -R ${REPOPATH}img $DEPLOYPATH
