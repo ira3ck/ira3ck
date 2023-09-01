@@ -4,7 +4,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/irackcom/public_html
-    - export REPOPATH=/home/irackcom/repositories/ira3ckDotCom
+    - export REPOPATH=/home/irackcom/repositories/ira3ckDotCom/ira3ck
     - /bin/cp -R . $DEPLOYPATH
     #- /bin/rm -Rf ${DEPLOYPATH}_old
     #- /bin/cp -R ${DEPLOYPATH} ${DEPLOYPATH}_old
