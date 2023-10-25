@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripi Party</title>
+    <link rel="stylesheet" href="./css/tripi_party.css">
+    <script src="https://www.gstatic.com/firebasejs/ui/6.1.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.1.0/firebase-ui-auth.css" />
+</head>
+
+<body>
+    <div id="centerCont">
+        <div id="firstCont">
+            <div id="only-signed">
+                <h1>TripiMalnacidos</h1>
+                <button id="toVote">Votar por el mejor disfraz</button>
+
+                <div id="nominees">
+                </div>
+
+                <div id="agregarNuevo">
+                    <label for="cosName">Nombre de tu disfraz</label><br>
+                    <input id="cosName" type="text" placeholder="Ej. Pirata, Peach, [Nombre de tu personaje]">
+                    <label for="referencia">Origen de personaje</label><br>
+                    <input id="referencia" type="text" placeholder="Ej. Piratas del Caribe, Mario Bros, [Nombre de película, juego o franquicia]">
+                    <label for="name">Disfrazado</label><br>
+                    <input id="name" type="text" placeholder="Tu nombre">
+
+                    <button id="addCostume">Agregar a la lista</button>
+                </div>
+                <button id="sign-out-btn">Salir</button>
+            </div>
+
+            <div id="need-sign-in">
+                <p>Necesitas autenticarte para ver el contenido de esta página :o</p>
+                <button id="sign-in-btn">SIGN IN</button>
+            </div>
+
+            <dialog id="confirmPP">
+                <h3>Confirma tu voto</h3>
+                <p>Estás por otorgarle <span id="puntos">0</span> puntos a <span id="">0</span></p>
+                <p>¿Es eso correcto?</p>
+                <div class="row">
+                    <button id="noVoto">No</button>
+                    <button id="siVoto">Sí</button>
+                </div>
+            </dialog>
+        </div>
+    </div>
+
+    <script type="module" src="./js/firebase_init.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/rw.js"></script>
+</body>
+
+</html>

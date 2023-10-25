@@ -1,0 +1,128 @@
+:root {
+    --color: blueviolet;
+    --font: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: black;
+    color: var(--color);
+    font-family: var(--font);
+}
+
+#centerCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#firstCont {
+    align-self: center;
+    width: 100%;
+    max-width: 720px;
+}
+
+button {
+    background-color: transparent;
+    border: solid 2px blueviolet;
+    color: var(--color);
+    font-family: var(--font);
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    animation-name: rotateBTN;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotateBTN {
+    44.25% {
+        rotate: 0deg
+    }
+    44.5% {
+        rotate: 1deg
+    }
+    45% {
+        rotate: 0deg
+    }
+    47.5% {
+        rotate: -1.5deg
+    }
+    50% {
+        rotate: 1.5deg
+    }
+    52.5% {
+        rotate: -1.5deg
+    }
+    55% {
+        rotate: 0deg
+    }
+    100% {
+        rotate: 0deg
+    }
+}
+
+button:hover,
+button:active {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--color);
+    rotate: -3deg;
+}
+
+.costume {
+    border: solid 1.5px var(--color);
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    line-height: 0.3rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: large;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.costume p {
+    font-size: larger;
+}
+
+.selected {
+    background-color: var(--color);
+    color: black;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+}
+
+#voter {
+    background-color: black;
+    margin: -0.25rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-bottom-left-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    padding: none;
+}
+
+#voter button {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    font-size: x-large;
+}
+
+.right {
+    text-align: end;
+    font-size: small !important;
+    line-height: 0;
+}
+
+input[type=text] {
+    width: 100%;
+    background-color: black;
+    border: solid 1.5px var(--color);
+    color: var(--color);
+    height: 3rem;
+    margin-bottom: 1rem;
+    font-family: var(--font);
+}
